@@ -2,6 +2,6 @@
 
 import React from "react";
 
-export default function FindingsPage() {
+export default function Page() {
   return <div className="min-h-[500px]" />;
 }

@@ -174,7 +174,7 @@ const clientMenuItems: MenuItem[] = [
     icon: "Search",
     color: "text-orange-400",
     label: "Findings",
-    path: "/client/findings",
+    path: "/client/tools/findings",
   },
   {
     section: "OPERATIONS",
