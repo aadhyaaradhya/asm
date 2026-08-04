@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { FakeWebsiteDetection } from "@/components/brandguard/FakeWebsiteDetection";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function FakeWebsitePage() {
+  return <FakeWebsiteDetection />;
 }

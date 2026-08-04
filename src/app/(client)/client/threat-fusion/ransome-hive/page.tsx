@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { ThreatIntelCenter } from "@/components/threatintel/ThreatIntelCenter";
 
 export default function RansomeHivePage() {
-  return <div className="min-h-[500px]" />;
+  return <ThreatIntelCenter />;
 }

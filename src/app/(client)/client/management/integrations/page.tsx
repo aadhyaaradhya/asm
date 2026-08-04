@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { ManagementCenter } from "@/components/management/ManagementCenter";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function IntegrationsPage() {
+  return <ManagementCenter />;
 }

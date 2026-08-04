@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { AuditLogActivity } from "@/components/operations/AuditLogActivity";
 
-export default function MyActivityPage() {
-  return <div className="min-h-[500px]" />;
+export default function ToolsMyActivityPage() {
+  return <AuditLogActivity />;
 }

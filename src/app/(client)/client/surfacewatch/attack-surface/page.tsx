@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { SubdomainTakeoverScanner } from "@/components/surfacewatch/SubdomainTakeoverScanner";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function SurfaceAttackSurfacePage() {
+  return <SubdomainTakeoverScanner />;
 }

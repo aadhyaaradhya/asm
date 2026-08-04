@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { HeaderHealthCertPulse } from "@/components/surfacewatch/HeaderHealthCertPulse";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function InfraSslTlsPage() {
+  return <HeaderHealthCertPulse />;
 }

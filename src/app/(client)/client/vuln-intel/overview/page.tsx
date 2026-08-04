@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { VulnerabilitiesList } from "@/components/vulnintel/VulnerabilitiesList";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function VulnIntelOverviewPage() {
+  return <VulnerabilitiesList />;
 }

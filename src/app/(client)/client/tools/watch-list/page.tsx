@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { WatchlistMonitor } from "@/components/operations/WatchlistMonitor";
 
-export default function WatchListPage() {
-  return <div className="min-h-[500px]" />;
+export default function ToolsWatchlistPage() {
+  return <WatchlistMonitor />;
 }

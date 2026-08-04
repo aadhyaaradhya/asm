@@ -22,14 +22,13 @@ const clientMenuItems: MenuItem[] = [
     color: "text-purple-400",
     label: "BrandGuard",
     subItems: [
-      { label: "Brand Overview", path: "/client/brandguard/overview" },
-      { label: "Social Impersonation", path: "/client/brandguard/social-impersonation" },
-      { label: "RepoLeak Sentinel", path: "/client/brandguard/repoleak" },
+      { label: "Social Media", path: "/client/brandguard/social-impersonation" },
       { label: "AppClone Hunter", path: "/client/brandguard/appclone" },
-      { label: "News Monitor", path: "/client/brandguard/news" },
-      { label: "BrandMention Radar", path: "/client/brandguard/brandmention" },
       { label: "TypoSquat Tracker", path: "/client/brandguard/typosquat" },
       { label: "Fake Website Detection", path: "/client/brandguard/fake-website" },
+      { label: "RepoLeak Sentinel", path: "/client/brandguard/repoleak" },
+      { label: "News Surveillance", path: "/client/brandguard/news" },
+      { label: "BrandMention Radar", path: "/client/brandguard/brandmention" },
     ],
   },
   {
@@ -277,9 +276,8 @@ export default function ClientLayout({
   return (
     <ProtectedRoute allowedRoles={["client"]}>
       <div
-        className={`flex flex-col lg:flex-row min-h-screen transition-colors duration-200 ${
-          isDark ? "bg-[#090d16] text-white" : "bg-[#eff6ff] text-slate-900"
-        }`}
+        className={`flex flex-col lg:flex-row min-h-screen transition-colors duration-200 ${isDark ? "bg-[#090d16] text-white" : "bg-[#eff6ff] text-slate-900"
+          }`}
       >
         <DashboardSidebarleftSide
           menuItems={clientMenuItems}

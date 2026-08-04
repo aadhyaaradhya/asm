@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { OpenPortsInventory } from "@/components/surfacewatch/OpenPortsInventory";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function SurfaceExposedServicesPage() {
+  return <OpenPortsInventory />;
 }

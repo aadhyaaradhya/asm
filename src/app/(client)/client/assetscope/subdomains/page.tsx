@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { SubdomainMapper } from "@/components/assetscope/SubdomainMapper";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function SubdomainsPage() {
+  return <SubdomainMapper />;
 }

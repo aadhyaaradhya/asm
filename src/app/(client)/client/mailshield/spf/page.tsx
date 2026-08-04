@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { SpfAnalyzer } from "@/components/mailshield/SpfAnalyzer";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function SpfPage() {
+  return <SpfAnalyzer />;
 }

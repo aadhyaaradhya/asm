@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { ThirdPartyLeaksWatch } from "@/components/darkweb/ThirdPartyLeaksWatch";
 
 export default function ThirdPartyLeakPage() {
-  return <div className="min-h-[500px]" />;
+  return <ThirdPartyLeaksWatch />;
 }

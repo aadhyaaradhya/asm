@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { DmarcValidation } from "@/components/mailshield/DmarcValidation";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function MailSpoofingPage() {
+  return <DmarcValidation />;
 }

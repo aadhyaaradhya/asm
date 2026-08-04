@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { IpReputation } from "@/components/reputrac/IpReputation";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function IpReputationPage() {
+  return <IpReputation />;
 }

@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { NewsSurveillance } from "@/components/brandguard/NewsSurveillance";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function NewsPage() {
+  return <NewsSurveillance />;
 }

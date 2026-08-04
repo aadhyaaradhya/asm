@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { AppCloneHunter } from "@/components/brandguard/AppCloneHunter";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function AppClonePage() {
+  return <AppCloneHunter />;
 }

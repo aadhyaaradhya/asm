@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { TakedownRequestsLog } from "@/components/operations/TakedownRequestsLog";
 
-export default function TakedownsPage() {
-  return <div className="min-h-[500px]" />;
+export default function ToolsTakedownsPage() {
+  return <TakedownRequestsLog />;
 }

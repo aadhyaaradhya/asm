@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { RepoLeakSentinel } from "@/components/brandguard/RepoLeakSentinel";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function RepoLeakPage() {
+  return <RepoLeakSentinel />;
 }

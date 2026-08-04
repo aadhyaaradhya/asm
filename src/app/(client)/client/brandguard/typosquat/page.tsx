@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { TypoSquatTracker } from "@/components/brandguard/TypoSquatTracker";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function TypoSquatPage() {
+  return <TypoSquatTracker />;
 }

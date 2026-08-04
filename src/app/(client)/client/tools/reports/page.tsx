@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { ReportBuilderGenerator } from "@/components/operations/ReportBuilderGenerator";
 
-export default function ReportsPage() {
-  return <div className="min-h-[500px]" />;
+export default function ToolsReportsPage() {
+  return <ReportBuilderGenerator />;
 }

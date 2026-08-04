@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { HistoricIpTracker } from "@/components/infrasight/HistoricIpTracker";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function AssetHistoricalIpPage() {
+  return <HistoricIpTracker />;
 }

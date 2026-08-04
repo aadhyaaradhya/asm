@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { AdminPortalExposure } from "@/components/vulnintel/AdminPortalExposure";
 
-export default function ClientPortalPage() {
-  return <div className="min-h-[500px]" />;
+export default function VulnClientPortalPage() {
+  return <AdminPortalExposure />;
 }

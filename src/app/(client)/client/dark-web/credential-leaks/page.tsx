@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { CustomerLeaksRadar } from "@/components/darkweb/CustomerLeaksRadar";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function CredentialLeaksPage() {
+  return <CustomerLeaksRadar />;
 }

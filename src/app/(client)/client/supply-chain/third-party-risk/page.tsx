@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { SupplyChainMonitor } from "@/components/supplychain/SupplyChainMonitor";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function ThirdPartyRiskPage() {
+  return <SupplyChainMonitor />;
 }

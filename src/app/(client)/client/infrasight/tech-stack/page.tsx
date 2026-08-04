@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { TechStackFingerprint } from "@/components/infrasight/TechStackFingerprint";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function TechStackPage() {
+  return <TechStackFingerprint />;
 }

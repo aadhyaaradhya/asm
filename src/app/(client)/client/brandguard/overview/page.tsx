@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { BrandMentionRadar } from "@/components/brandguard/BrandMentionRadar";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function BrandGuardOverviewPage() {
+  return <BrandMentionRadar />;
 }

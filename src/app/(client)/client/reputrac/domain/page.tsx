@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { DomainReputation } from "@/components/reputrac/DomainReputation";
 
-export default function Page() {
-  return <div className="min-h-[500px]" />;
+export default function DomainReputationPage() {
+  return <DomainReputation />;
 }

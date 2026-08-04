@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
+import { CardLeakSentinel } from "@/components/darkweb/CardLeakSentinel";
 
 export default function CardLeaksPage() {
-  return <div className="min-h-[500px]" />;
+  return <CardLeakSentinel />;
 }
