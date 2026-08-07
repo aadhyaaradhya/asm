@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ProtectedRoute } from "@/components/dashboard/ProtectedRoute";
 import { DashboardSidebarleftSide, MenuItem } from "@/components/dashboard/DashboardSidebarleftSide";
 import { DashboardHeaderTopSide } from "@/components/dashboard/DashboardHeaderTopSide";
@@ -258,6 +258,16 @@ export default function ClientLayout({
   const [searchQuery, setSearchQuery] = useState("");
   const [isDark, setIsDark] = useState(true);
 
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      if (isDark) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    }
+  }, [isDark]);
+
   const userInfo = {
     name: "SOC Analyst",
     email: "analyst@apexnationalbank.com",
@@ -276,8 +286,9 @@ export default function ClientLayout({
   return (
     <ProtectedRoute allowedRoles={["client"]}>
       <div
-        className={`flex flex-col lg:flex-row min-h-screen transition-colors duration-200 ${isDark ? "bg-[#090d16] text-white" : "bg-[#eff6ff] text-slate-900"
-          }`}
+        className={`flex flex-col lg:flex-row min-h-screen transition-colors duration-200 ${
+          isDark ? "bg-[#090d16] text-white" : "bg-[#f8fafc] text-slate-900"
+        }`}
       >
         <DashboardSidebarleftSide
           menuItems={clientMenuItems}

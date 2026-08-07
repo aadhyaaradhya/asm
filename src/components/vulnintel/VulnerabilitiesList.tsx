@@ -133,36 +133,36 @@ export const VulnerabilitiesList: React.FC = () => {
     <div className="space-y-6 max-w-[1600px] mx-auto pb-10">
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 bg-slate-900 border border-cyan-500/80 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 animate-slide-up">
+        <div className="fixed bottom-6 right-6 z-50 bg-slate-900 dark:bg-slate-900 border border-cyan-500/80 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 animate-slide-up">
           <FiCheckCircle className="w-5 h-5 text-cyan-400" />
           <span className="text-xs font-medium">{toastMessage}</span>
         </div>
       )}
 
-      {/* Header Section (NO BREADCRUMBS as requested) */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-800/60">
+      {/* Header Section */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800/60">
         <div className="flex items-center gap-3.5">
-          <div className="w-10 h-10 rounded-xl bg-rose-950/60 border border-rose-800/60 flex items-center justify-center text-rose-400 shadow-md">
+          <div className="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800/60 flex items-center justify-center text-rose-600 dark:text-rose-400 shadow-md">
             <FiAlertTriangle className="w-5 h-5" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-white tracking-wide">Vulnerabilities</h1>
-            <p className="text-xs text-slate-400 mt-0.5 font-medium">
-              VulnIntel <span className="text-slate-600">•</span> MEGA <span className="text-slate-600">•</span> mega.io
+            <h1 className="text-2xl font-bold text-slate-900 dark:text-white tracking-wide">Vulnerabilities</h1>
+            <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5 font-medium">
+              VulnIntel <span className="text-slate-400 dark:text-slate-600">•</span> MEGA <span className="text-slate-400 dark:text-slate-600">•</span> mega.io
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-3">
-          <span className="px-3 py-1 bg-red-950/60 border border-red-800/60 text-red-400 text-[10px] font-bold tracking-wider rounded uppercase">
+          <span className="px-3 py-1 bg-red-100 dark:bg-red-950/60 border border-red-200 dark:border-red-800/60 text-red-600 dark:text-red-400 text-[10px] font-bold tracking-wider rounded uppercase">
             HIGH RISK
           </span>
 
           <button
             onClick={() => showToast("Exporting Vulnerabilities Report...")}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 text-slate-200 text-xs font-semibold rounded-lg transition-all shadow-sm active:scale-95 cursor-pointer"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-900/80 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-300 dark:border-slate-700/80 text-slate-800 dark:text-slate-200 text-xs font-semibold rounded-lg transition-all shadow-xs dark:shadow-sm active:scale-95 cursor-pointer"
           >
-            <FiDownload className="w-3.5 h-3.5 text-slate-400" />
+            <FiDownload className="w-3.5 h-3.5 text-slate-500 dark:text-slate-400" />
             <span>Export Report</span>
           </button>
         </div>
@@ -170,46 +170,46 @@ export const VulnerabilitiesList: React.FC = () => {
 
       {/* 4 Top Metric Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-[#0d1322]/80 backdrop-blur-md border border-slate-800/80 rounded-xl p-5 shadow-lg relative overflow-hidden">
-          <span className="text-[10px] font-bold text-slate-400 tracking-wider uppercase block">
+        <div className="bg-white dark:bg-[#0d1322]/80 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-xs dark:shadow-lg relative overflow-hidden">
+          <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 tracking-wider uppercase block">
             DETECTED CVES
           </span>
-          <span className="text-3xl font-extrabold text-white mt-2 block">8</span>
-          <span className="text-[11px] text-slate-400 mt-1 block">Across all assets</span>
+          <span className="text-3xl font-extrabold text-slate-900 dark:text-white mt-2 block">8</span>
+          <span className="text-[11px] text-slate-600 dark:text-slate-400 mt-1 block">Across all assets</span>
         </div>
 
-        <div className="bg-[#0d1322]/80 backdrop-blur-md border border-slate-800/80 rounded-xl p-5 shadow-lg relative overflow-hidden">
-          <span className="text-[10px] font-bold text-slate-400 tracking-wider uppercase block">
+        <div className="bg-white dark:bg-[#0d1322]/80 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-xs dark:shadow-lg relative overflow-hidden">
+          <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 tracking-wider uppercase block">
             CRITICAL
           </span>
-          <span className="text-3xl font-extrabold text-red-500 mt-2 block">2</span>
-          <span className="text-[11px] text-slate-400 mt-1 block">Patch immediately</span>
+          <span className="text-3xl font-extrabold text-red-600 dark:text-red-500 mt-2 block">2</span>
+          <span className="text-[11px] text-slate-600 dark:text-slate-400 mt-1 block">Patch immediately</span>
         </div>
 
-        <div className="bg-[#0d1322]/80 backdrop-blur-md border border-slate-800/80 rounded-xl p-5 shadow-lg relative overflow-hidden">
-          <span className="text-[10px] font-bold text-slate-400 tracking-wider uppercase block">
+        <div className="bg-white dark:bg-[#0d1322]/80 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-xs dark:shadow-lg relative overflow-hidden">
+          <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 tracking-wider uppercase block">
             EXPLOITABLE
           </span>
-          <span className="text-3xl font-extrabold text-amber-500 mt-2 block">5</span>
-          <span className="text-[11px] text-slate-400 mt-1 block">Known exploit available</span>
+          <span className="text-3xl font-extrabold text-amber-600 dark:text-amber-500 mt-2 block">5</span>
+          <span className="text-[11px] text-slate-600 dark:text-slate-400 mt-1 block">Known exploit available</span>
         </div>
 
-        <div className="bg-[#0d1322]/80 backdrop-blur-md border border-slate-800/80 rounded-xl p-5 shadow-lg relative overflow-hidden">
-          <span className="text-[10px] font-bold text-slate-400 tracking-wider uppercase block">
+        <div className="bg-white dark:bg-[#0d1322]/80 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-xs dark:shadow-lg relative overflow-hidden">
+          <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 tracking-wider uppercase block">
             MAX CVSS
           </span>
-          <span className="text-3xl font-extrabold text-white mt-2 block">9.8</span>
-          <span className="text-[11px] text-slate-400 mt-1 block">Highest scored issue</span>
+          <span className="text-3xl font-extrabold text-slate-900 dark:text-white mt-2 block">9.8</span>
+          <span className="text-[11px] text-slate-600 dark:text-slate-400 mt-1 block">Highest scored issue</span>
         </div>
       </div>
 
       {/* Middle Section: Donut + Bar Chart */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
         {/* Left Donut */}
-        <div className="lg:col-span-5 bg-[#0d1322]/80 backdrop-blur-md border border-slate-800/80 rounded-xl p-5 shadow-lg flex flex-col justify-between">
+        <div className="lg:col-span-5 bg-white dark:bg-[#0d1322]/80 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-xs dark:shadow-lg flex flex-col justify-between">
           <div>
-            <h3 className="text-sm font-semibold text-white tracking-wide">Severity Distribution</h3>
-            <p className="text-xs text-slate-400 mt-0.5">Detected CVEs by severity</p>
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-white tracking-wide">Severity Distribution</h3>
+            <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Detected CVEs by severity</p>
           </div>
 
           <div className="my-6 flex flex-col items-center justify-center">
@@ -223,22 +223,22 @@ export const VulnerabilitiesList: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-3 mt-4 text-[11px]">
-              <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-yellow-400" /><span className="text-slate-300">Medium - 2</span></div>
-              <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-emerald-500" /><span className="text-slate-300">Low - 1</span></div>
-              <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-amber-500" /><span className="text-slate-300">High - 3</span></div>
-              <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-red-500" /><span className="text-slate-300">Critical - 2</span></div>
+              <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-yellow-400" /><span className="text-slate-700 dark:text-slate-300">Medium - 2</span></div>
+              <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-emerald-500" /><span className="text-slate-700 dark:text-slate-300">Low - 1</span></div>
+              <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-amber-500" /><span className="text-slate-700 dark:text-slate-300">High - 3</span></div>
+              <div className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-red-500" /><span className="text-slate-700 dark:text-slate-300">Critical - 2</span></div>
             </div>
           </div>
         </div>
 
         {/* Right Bar Chart */}
-        <div className="lg:col-span-7 bg-[#0d1322]/80 backdrop-blur-md border border-slate-800/80 rounded-xl p-5 shadow-lg flex flex-col justify-between">
+        <div className="lg:col-span-7 bg-white dark:bg-[#0d1322]/80 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-xs dark:shadow-lg flex flex-col justify-between">
           <div>
-            <h3 className="text-sm font-semibold text-white tracking-wide">Affected Components</h3>
-            <p className="text-xs text-slate-400 mt-0.5">CVE count per software component</p>
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-white tracking-wide">Affected Components</h3>
+            <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">CVE count per software component</p>
           </div>
 
-          <div className="my-6 h-40 flex items-end justify-around border-b border-slate-800/80 pb-2">
+          <div className="my-6 h-40 flex items-end justify-around border-b border-slate-200 dark:border-slate-800/80 pb-2">
             {[
               { name: "Nginx", count: 4 },
               { name: "PHP", count: 1 },
@@ -247,15 +247,15 @@ export const VulnerabilitiesList: React.FC = () => {
               { name: "Apache", count: 1 },
             ].map((bar) => (
               <div key={bar.name} className="flex flex-col items-center gap-2 w-20">
-                <div className="w-full bg-slate-900/90 rounded-t h-32 flex items-end p-1">
+                <div className="w-full bg-slate-100 dark:bg-slate-900/90 rounded-t h-32 flex items-end p-1">
                   <div
-                    className="w-full bg-blue-500 rounded-t flex items-center justify-center text-xs font-bold text-white"
+                    className="w-full bg-blue-600 dark:bg-blue-500 rounded-t flex items-center justify-center text-xs font-bold text-white"
                     style={{ height: `${(bar.count / 4) * 100}%` }}
                   >
                     {bar.count}
                   </div>
                 </div>
-                <span className="text-[10px] font-medium text-slate-400">{bar.name}</span>
+                <span className="text-[10px] font-medium text-slate-600 dark:text-slate-400">{bar.name}</span>
               </div>
             ))}
           </div>
@@ -263,18 +263,20 @@ export const VulnerabilitiesList: React.FC = () => {
       </div>
 
       {/* Bottom Table Section */}
-      <div className="bg-[#0d1322]/80 backdrop-blur-md border border-slate-800/80 rounded-xl p-5 shadow-lg">
+      <div className="bg-white dark:bg-[#0d1322]/80 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-xl p-5 shadow-xs dark:shadow-lg">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5">
           <div>
-            <h2 className="text-base font-bold text-white tracking-wide">Active Vulnerabilities</h2>
-            <p className="text-xs text-slate-400 mt-0.5">Known vulnerabilities (CVEs) affecting the monitored infrastructure</p>
+            <h2 className="text-base font-bold text-slate-900 dark:text-white tracking-wide">Active Vulnerabilities</h2>
+            <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Known vulnerabilities (CVEs) affecting the monitored infrastructure</p>
           </div>
 
           <div className="flex items-center gap-2">
             <button
               onClick={() => setCriticalOnly(!criticalOnly)}
               className={`px-3 py-1 rounded text-xs font-medium transition-all ${
-                criticalOnly ? "bg-red-950 text-red-400 border border-red-800" : "bg-slate-900 text-slate-400 border border-slate-800"
+                criticalOnly
+                  ? "bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-400 border border-red-300 dark:border-red-800"
+                  : "bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800"
               }`}
             >
               Critical only
@@ -282,24 +284,26 @@ export const VulnerabilitiesList: React.FC = () => {
             <button
               onClick={() => setExploitableOnly(!exploitableOnly)}
               className={`px-3 py-1 rounded text-xs font-medium transition-all ${
-                exploitableOnly ? "bg-amber-950 text-amber-400 border border-amber-800" : "bg-slate-900 text-slate-400 border border-slate-800"
+                exploitableOnly
+                  ? "bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-400 border border-amber-300 dark:border-amber-800"
+                  : "bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800"
               }`}
             >
               Exploitable
             </button>
-            <span className="text-xs text-slate-400 font-medium ml-2">Showing {filtered.length} results</span>
+            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium ml-2">Showing {filtered.length} results</span>
           </div>
         </div>
 
         {/* Search Bar */}
         <div className="relative mb-5">
-          <FiSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+          <FiSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 dark:text-slate-500" />
           <input
             type="text"
             placeholder="Search CVE, asset or component..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 bg-slate-900/90 border border-slate-800/90 rounded-xl text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500/80 transition-all shadow-inner"
+            className="w-full pl-10 pr-4 py-2.5 bg-slate-50 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800/90 rounded-xl text-xs text-slate-900 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-cyan-500/80 transition-all shadow-xs"
           />
         </div>
 
@@ -307,7 +311,7 @@ export const VulnerabilitiesList: React.FC = () => {
         <div className="overflow-x-auto custom-sidebar-scrollbar">
           <table className="w-full text-left border-collapse min-w-[900px]">
             <thead>
-              <tr className="border-b border-slate-800/80 text-[10px] uppercase font-bold text-slate-400 tracking-wider">
+              <tr className="border-b border-slate-200 dark:border-slate-800/80 text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">
                 <th className="py-3 px-3">ALERT ID</th>
                 <th className="py-3 px-3">CVE ID</th>
                 <th className="py-3 px-3">DESCRIPTION</th>
@@ -318,30 +322,30 @@ export const VulnerabilitiesList: React.FC = () => {
                 <th className="py-3 px-3 text-right">ACTIONS</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-800/40 text-xs">
+            <tbody className="divide-y divide-slate-100 dark:divide-slate-800/40 text-xs">
               {filtered.map((item) => (
-                <tr key={item.id} className="hover:bg-slate-800/40 transition-colors group">
-                  <td className="py-3.5 px-3 font-mono text-cyan-400 font-semibold text-[11px]">{item.id}</td>
-                  <td className="py-3.5 px-3 font-mono font-bold text-cyan-300">{item.cveId}</td>
+                <tr key={item.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors group">
+                  <td className="py-3.5 px-3 font-mono text-cyan-600 dark:text-cyan-400 font-semibold text-[11px]">{item.id}</td>
+                  <td className="py-3.5 px-3 font-mono font-bold text-cyan-600 dark:text-cyan-300">{item.cveId}</td>
                   <td className="py-3.5 px-3 max-w-[360px]">
-                    <div className="text-slate-200 font-medium leading-snug">{item.desc}</div>
-                    <div className="text-[10px] text-cyan-400 font-mono mt-0.5">
-                      View <span className="text-slate-500">• {item.asset}</span>
+                    <div className="text-slate-800 dark:text-slate-200 font-medium leading-snug">{item.desc}</div>
+                    <div className="text-[10px] text-cyan-600 dark:text-cyan-400 font-mono mt-0.5">
+                      View <span className="text-slate-400 dark:text-slate-500">• {item.asset}</span>
                     </div>
                   </td>
-                  <td className="py-3.5 px-3 font-mono font-bold text-amber-400">{item.cvss}</td>
+                  <td className="py-3.5 px-3 font-mono font-bold text-amber-600 dark:text-amber-400">{item.cvss}</td>
                   <td className="py-3.5 px-3">
                     {item.severity === "CRITICAL" && (
-                      <span className="px-2 py-0.5 rounded text-[9px] font-bold bg-red-950/80 border border-red-800 text-red-400 uppercase">CRITICAL</span>
+                      <span className="px-2 py-0.5 rounded text-[9px] font-bold bg-red-100 dark:bg-red-950/80 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 uppercase">CRITICAL</span>
                     )}
                     {item.severity === "HIGH" && (
-                      <span className="px-2 py-0.5 rounded text-[9px] font-bold bg-amber-950/80 border border-amber-800 text-amber-400 uppercase">HIGH</span>
+                      <span className="px-2 py-0.5 rounded text-[9px] font-bold bg-amber-100 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-800 text-amber-600 dark:text-amber-400 uppercase">HIGH</span>
                     )}
                     {item.severity === "MEDIUM" && (
-                      <span className="px-2 py-0.5 rounded text-[9px] font-bold bg-yellow-950/80 border border-yellow-800 text-yellow-400 uppercase">MEDIUM</span>
+                      <span className="px-2 py-0.5 rounded text-[9px] font-bold bg-yellow-100 dark:bg-yellow-950/80 border border-yellow-200 dark:border-yellow-800 text-yellow-700 dark:text-yellow-400 uppercase">MEDIUM</span>
                     )}
                     {item.severity === "LOW" && (
-                      <span className="px-2 py-0.5 rounded text-[9px] font-bold bg-cyan-950/80 border border-cyan-800 text-cyan-400 uppercase">LOW</span>
+                      <span className="px-2 py-0.5 rounded text-[9px] font-bold bg-cyan-100 dark:bg-cyan-950/80 border border-cyan-200 dark:border-cyan-800 text-cyan-700 dark:text-cyan-400 uppercase">LOW</span>
                     )}
                   </td>
                   <td className="py-3.5 px-3">
@@ -352,18 +356,18 @@ export const VulnerabilitiesList: React.FC = () => {
                           prev.map((i) => (i.id === item.id ? { ...i, status: e.target.value } : i))
                         )
                       }
-                      className="bg-slate-900 border border-slate-700 text-slate-300 text-xs px-2.5 py-1 rounded"
+                      className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-300 text-xs px-2.5 py-1 rounded"
                     >
                       <option value="Open">Open</option>
                       <option value="Accept Risk">Accept Risk</option>
                       <option value="Fixed">Fixed</option>
                     </select>
                   </td>
-                  <td className="py-3.5 px-3 text-slate-400 font-mono text-[11px]">{item.detectedAt}</td>
+                  <td className="py-3.5 px-3 text-slate-500 dark:text-slate-400 font-mono text-[11px]">{item.detectedAt}</td>
                   <td className="py-3.5 px-3 text-right">
                     <button
                       onClick={() => showToast(`Opening comments for ${item.id}`)}
-                      className="p-1.5 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-400 hover:text-cyan-400 rounded-lg transition-colors cursor-pointer"
+                      className="p-1.5 bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 rounded-lg transition-colors cursor-pointer"
                     >
                       <FiMessageSquare className="w-3.5 h-3.5" />
                     </button>
